@@ -7,13 +7,13 @@ a {
   color: #fff;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 620px) {
   img {
     width: 400px;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 420px) {
   img {
     width: 300px;
   }
