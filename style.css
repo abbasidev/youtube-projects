@@ -12,26 +12,10 @@
 
 /* / */
 
-[data-theme="light"] {
-  --color-primery-1: #363636;
-  --color-primery-2: #505050;
-  --color-primery-5: #e9e9e9;
-  --color-primery-4: #f1f1f1;
-  --color-primery-3: #fafafa;
-
-  --color-primery-6: #e9e9e9;
-  --color-primery-7: #a4a4a4;
-}
-
-[data-theme="dark"] {
+:root {
   --color-primery-1: #fafafa;
-  --color-primery-2: #e0e0e0;
-  --color-primery-3: #252525;
-  --color-primery-4: #1c1c1c;
-  --color-primery-5: #141414; /* base */
-
-  --color-primery-6: #363636;
-  --color-primery-7: #696969;
+  --color-primery-2: #252525;
+  --color-primery-3: #1c1c1c; /* base */
 }
 
 /* / */
@@ -49,108 +33,9 @@ html {
 
 body {
   font-family: "Encode Sans", sans-serif;
-  background: var(--color-primery-5);
+  background: var(--color-primery-3);
   color: var(--color-primery-1);
   letter-spacing: 0.1rem;
-}
-
-/* / */
-
-.container {
-  margin: 0 auto;
-  min-height: 100dvh;
-  width: 70rem;
-  background: var(--color-primery-4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* / */
-
-.header,
-.footer {
-  background: var(--color-primery-3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: inherit;
-  height: 8rem;
-  position: sticky;
-}
-
-/* / */
-
-.header {
-  border-bottom: 0.2rem solid var(--color-primery-6);
-  top: 0;
-  justify-content: space-between;
-
-  a:nth-child(2) {
-    &:any-link {
-      svg {
-        height: 3.2rem;
-
-        .path-a {
-          fill: var(--color-primery-1);
-        }
-        .path-d {
-          fill: var(--color-primery-1);
-        }
-      }
-    }
-  }
-
-  a:nth-child(1) {
-    &:any-link {
-      margin-left: 2.4rem;
-      svg {
-        width: 3.2rem;
-        height: 3.2rem;
-        fill: var(--color-primery-7);
-      }
-    }
-  }
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 2.4rem;
-
-  svg {
-    width: 3.2rem;
-    height: 3.2rem;
-    fill: var(--color-primery-7);
-  }
-}
-
-/* / */
-
-.footer {
-  border-top: 0.2rem solid var(--color-primery-6);
-  bottom: 0;
-
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: inherit;
-    list-style: none;
-    margin: 0 2rem;
-
-    li {
-      a {
-        &:any-link {
-          font-size: 1.8rem;
-          font-weight: 400;
-          color: var(--color-primery-1);
-        }
-      }
-    }
-  }
 }
 
 /* / */
@@ -161,30 +46,20 @@ button {
   align-items: center;
   justify-content: center;
   gap: 2.4rem;
-  margin: 2.4rem 0;
+  margin: 2.4rem 2rem;
 
   h1 {
     font-size: 2.8rem;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    background-image: linear-gradient(
-      to right,
-      #ef4444 0%,
-      #eab308 25%,
-      #10b981 50%,
-      #0ea5e9 75%,
-      #8b5cf6 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0 1.2rem;
   }
 
   ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 1.6rem;
     list-style: none;
 
@@ -195,69 +70,14 @@ button {
           font-size: 1.6rem;
           font-weight: 400;
           line-height: 150%;
-          width: 66rem;
           padding: 2rem;
           border-radius: 1.6rem;
-          background: var(--color-primery-3);
-          color: var(--color-primery-2);
-        }
-        span:first-child {
-          margin-left: 0.8rem;
+          background: var(--color-primery-2);
+          color: var(--color-primery-1);
         }
       }
     }
   }
-}
-
-/* / */
-
-/* tailwindcss.com colors */
-
-.html,
-.git {
-  color: #f97316; /* Orange 500 */
-}
-
-.css,
-.typescript {
-  color: #3b82f6; /* Blue 500 */
-}
-
-.sass {
-  color: #ec4899; /* Pink 500 */
-}
-
-.tailwind-css {
-  color: #06b6d4; /* Cyan 500 */
-}
-
-.javascript {
-  color: #eab308; /* Yellow 500 */
-}
-
-.react,
-.vscode,
-.algorithms {
-  color: #0ea5e9; /* Sky 500 */
-}
-
-.web-apis,
-.data-structures {
-  color: #ef4444; /* Red 500 */
-}
-
-.clean-code {
-  color: #22c55e; /* Green 500 */
-}
-
-.next-js,
-.github,
-.powershell {
-  color: #a3a3a3; /* Neutral 400 */
-}
-
-.regular-expression {
-  color: #10b981; /* Emerald 500 */
 }
 
 /* / */
@@ -265,20 +85,6 @@ button {
 @media (max-width: 780px) {
   html {
     font-size: 56%;
-  }
-  .container {
-    width: 100%;
-  }
-  .main {
-    ul {
-      li {
-        a {
-          &:any-link {
-            width: 90vw;
-          }
-        }
-      }
-    }
   }
 }
 
