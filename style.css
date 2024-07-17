@@ -36,6 +36,11 @@ body {
   background: var(--color-primery-3);
   color: var(--color-primery-1);
   letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
 }
 
 /* / */
